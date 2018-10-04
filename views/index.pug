@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    .row(class='justify-content-center login-container')
+        .col.col-4
+            h1 Login
+
+            form(id='form')
+                .form-group
+                    input(type='type', class='form-control', placeholder='Usuário')
+
+                .form-group
+                    input(type='password', class='form-control', placeholder='Senha')
+
+                button(type='submit', class='btn btn-lg btn-block') Enviar
+
+
+    .modal.fade(id='user-data', tabindex='-1', role='dialog', aria-labelledby='user-data-label', aria-hidden='true')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content
+                .modal-header
+                    h5(class='modal-title', id='user-data-label') Resumo da conta
+                    button(type='button', class='close', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') &times;
+                
+                .modal-body
+                    h2(id='user-name')  
+
+                    h3 Limites
+                    .row.user-limits
+
+                    h3 Últimas compras
+                    .transaction-list
+                        .row.transaction-list--header
+                            .col Descrição
+                            .col Data
+                            .col Categoria
+                            .col Preço
+
+                .modal-footer
+                    button(type='button', class='btn btn-secondary', data-dismiss='modal') Fechar
