@@ -1,0 +1,102 @@
+html,
+body {
+    min-height: 100vh;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #81259D;
+}
+
+/**
+ * Text
+ **/
+h1 {
+    line-height: 1;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/**
+ * Login container
+ **/
+.login-container {
+    color: #FFF;
+}
+
+/**
+ * Form
+ **/
+form > .form-group > input {
+    padding: 3rem 2rem;
+}
+
+form > .btn {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1px solid #FFF;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 2rem;
+    opacity: 0.5;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+form > .btn,
+form > .form-group > input {
+    font-size: 2rem;
+}
+
+/**
+ * Modal
+ **/
+.modal {
+    font-size: 1.4rem;
+}
+    .modal-header,
+    .modal-footer {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .modal .modal-body {
+        padding: 2.5rem;
+    }
+        .modal .modal-body > h2 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .modal .modal-body > h3 {
+            font-size: 2rem;
+            margin: 4rem 0 2rem;
+        }
+
+    /**
+     * User limits
+     **/
+    .user-limits > .col > .title {
+        display: block;
+        font-weight: 700;
+    }
+
+    /**
+     * Transaction list
+     **/
+    .transaction-list--header > .col {
+        background-color: #E0E0E0;
+    }
+
+    .transaction-list--item > .col,
+    .transaction-list--header > .col {
+        padding: 1rem 1.5rem;
+    }
+
+    .transaction-list--item:nth-child(odd) {
+        background-color: #F1F1F1;
+    }
