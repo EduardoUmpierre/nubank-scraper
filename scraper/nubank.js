@@ -1,5 +1,7 @@
-var casper = require('casper').create();
-casper.options.waitTimeout = 50000;
+var casper = require('casper').create({
+    userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36'
+});
+casper.options.waitTimeout = 25000;
 
 var data = {};
 
@@ -10,8 +12,11 @@ casper.start('https://app.nubank.com.br/');
 casper.waitForSelector('form input[type=text]', function () {
     var options = casper.cli.options;
 
-    this.sendKeys('input[type=text]', options['user']);
-    this.sendKeys('input[type=password]', options['password']);
+    this.fillSelectors('form', {
+        'input[type=text]': options['user'].replace(/\'/g, ''),
+        'input[type=password]': options['password'].replace(/\'/g, '')
+    });
+    
     this.click('button[type=submit]');
 });
 
