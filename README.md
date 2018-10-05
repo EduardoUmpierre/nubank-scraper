@@ -1,7 +1,7 @@
 # Nubank scraper
 A web scraper created to get user data from Nubank's dashboard.
 
-## API return
+## API response
 | Field | Type | Description | Example |
 | ----- | ---- | ----------- | ------- |
 | limits | Object | List of all limits available at the dashboard | `"limits": { "future": { "text": "Próximas Faturas", "value": "R$1000,00" }, "open": { "text": "Fatura Atual", "value": "R$500,00" }, "available": { "text": "Limite Disponível", "value": "R$2000,00" }`} |
