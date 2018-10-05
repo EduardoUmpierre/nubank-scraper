@@ -14,6 +14,8 @@ router.get('/', function (req, res) {
  */
 router.post('/data', function (req, res) {
     casper_wrapper(req.body.user, req.body.password).then(function (data) {
+        // @todo Insert data in database
+        // @todo Handle the error
         res.json(data);
     });
 });
