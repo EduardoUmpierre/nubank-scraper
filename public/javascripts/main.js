@@ -1,8 +1,16 @@
 $('#form').submit(function (e) {
     e.preventDefault();
 
+    var button = $("#submit");
+
+    button.html('Enviando...');
+    button.prop('disabled', true);
+
     // Execute the post request
-    $.post('/data', $(this).serialize(), function (data) {
+    $.post('/data', {
+        user: $("#user").val(),
+        password: $("#password").val()
+    }, function (data) {
         var userLimits = $('.user-limits');
         var transactionList = $('.transaction-list');
         var limits = data.limits;
@@ -41,5 +49,8 @@ $('#form').submit(function (e) {
 
         // Call the modal
         $('#user-data').modal();
+
+        button.html('Enviar');
+        button.prop('disabled', false);
     });
 });

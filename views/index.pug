@@ -7,12 +7,12 @@ block content
 
             form(id='form')
                 .form-group
-                    input(type='type', class='form-control', placeholder='Usuário')
+                    input(type='type', name='user', id='user', class='form-control', placeholder='Usuário', required)
 
                 .form-group
-                    input(type='password', class='form-control', placeholder='Senha')
+                    input(type='password', name='password', id='password', class='form-control', placeholder='Senha', required)
 
-                button(type='submit', class='btn btn-lg btn-block') Enviar
+                button(type='submit', id='submit', class='btn btn-lg btn-block') Enviar
 
 
     .modal.fade(id='user-data', tabindex='-1', role='dialog', aria-labelledby='user-data-label', aria-hidden='true')

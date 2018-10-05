@@ -42,10 +42,12 @@ form > .btn {
     color: #FFF;
     font-weight: 700;
     margin-top: 2rem;
-    opacity: 0.5;
     padding: 2rem;
     text-transform: uppercase;
 }
+    form > .btn:disabled {
+        opacity: 0.5;
+    }
 
 form > .btn,
 form > .form-group > input {
